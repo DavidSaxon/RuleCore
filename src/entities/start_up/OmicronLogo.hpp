@@ -13,6 +13,8 @@ private:
 
     // the stages of the cinematic
     enum Stage {
+        PRE_START,
+        INIT,
         WAIT_ONE,
         TEXT_ENTER,
         FLARE_EXPAND,

@@ -20,15 +20,11 @@ static const float CAM_DESHAKE         = 0.035f;
 void OmicronLogo::init()
 {
     // set up variables
-    m_stage = WAIT_ONE;
+    m_stage = PRE_START;
     m_timer = 0.0f;
 
     // create the components
     initComponents();
-
-    // play sound
-    omi::SoundPool::play(
-        omi::ResourceManager::getSound( "omicron_intro" ), false, 1.0f );
 }
 
 void OmicronLogo::update()
@@ -36,6 +32,30 @@ void OmicronLogo::update()
     // update based on the cinematic stage
     switch ( m_stage )
     {
+        case PRE_START:
+        {
+            // update the timer
+            m_timer += 0.005f * omi::fpsManager.getTimeScale();
+            //move to the next stage
+            if ( m_timer >= 1.0f )
+            {
+                m_stage = INIT;
+                m_timer = 0.0f;
+            }
+            break;
+
+        }
+        case INIT:
+        {
+            // play sound
+            omi::SoundPool::play(
+                    omi::ResourceManager::getSound( "omicron_intro" ),
+                    false,
+                    1.0f
+            );
+            m_stage = WAIT_ONE;
+            break;
+        }
         case WAIT_ONE:
         {
             // update the timer
@@ -136,8 +156,8 @@ void OmicronLogo::update()
 
 bool OmicronLogo::done()
 {
-    return true;
-    // return m_stage == DONE;
+    // return true;
+    return m_stage == DONE;
 }
 
 //------------------------------------------------------------------------------
