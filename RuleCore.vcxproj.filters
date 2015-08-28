@@ -1,17 +1,762 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="lib">
+      <UniqueIdentifier>{f62468e1-8193-45d1-b430-2508f21acf86}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="lib\Utilitron">
+      <UniqueIdentifier>{15318ff2-f456-48b4-84bd-ff54b6c36a1e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="lib\Utilitron\exceptions">
+      <UniqueIdentifier>{70c2b0c0-9c78-4ad2-b276-7a478fa1b4ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{367f721a-dd0e-4e50-a452-f7f29934adb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\data">
+      <UniqueIdentifier>{8ce3149f-07de-4420-9c9f-26c643747136}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\data\layers">
+      <UniqueIdentifier>{0cf21c5a-d407-4aa3-8811-0d535f894735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities">
+      <UniqueIdentifier>{7c633220-429b-4530-b1d7-e1b4de3aa041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities\debug">
+      <UniqueIdentifier>{a3065198-f6fb-4647-afc6-fc8844a00bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities\menu">
+      <UniqueIdentifier>{deab6439-6a4d-4670-9ba3-de86f09f66cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities\menu\setting_widget">
+      <UniqueIdentifier>{3012bb21-3116-45ed-a759-ee85973f2dd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities\start_up">
+      <UniqueIdentifier>{ddb19674-9727-4828-8ee5-e9b45cac067b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\entities\test">
+      <UniqueIdentifier>{d8e701c7-ccbc-4b50-8853-faabe821e93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\functions">
+      <UniqueIdentifier>{50cd2bcc-393f-4137-ada3-d1a5cdcf5d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\functions\settings">
+      <UniqueIdentifier>{3c4cf609-6a19-476a-a434-d2acf47f8b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron">
+      <UniqueIdentifier>{fe1ce977-ddf0-412b-96d5-bd81b9427736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\audio">
+      <UniqueIdentifier>{af67760a-03ff-46fe-8c7c-84a9c0dd8bf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\component">
+      <UniqueIdentifier>{da7b7cb2-bf86-4969-a248-5759e616bb55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\component\light">
+      <UniqueIdentifier>{90a8c832-b06e-4cc5-bc86-2b06143d3368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\component\physics">
+      <UniqueIdentifier>{c8790337-1004-41d4-93c9-f3a3253dde1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\component\renderable">
+      <UniqueIdentifier>{e15901d4-1847-4497-b4f3-623a1df49700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\component\updatable">
+      <UniqueIdentifier>{75533126-f229-4d1c-a343-dfd86fe9d318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\component\updatable\audio">
+      <UniqueIdentifier>{a3dba99f-3155-41ba-b9aa-dfb808c8856d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\display">
+      <UniqueIdentifier>{df87d64d-a131-40b1-888b-97341e73ccb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\entity">
+      <UniqueIdentifier>{18ef5886-9da7-472f-9d6e-f9a2b060f807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\input">
+      <UniqueIdentifier>{0af81b1e-f834-41c6-b58f-587542cba8b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\logic">
+      <UniqueIdentifier>{f0af3b83-2cd6-4002-9c23-179b6cb9e226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\physics">
+      <UniqueIdentifier>{dd89a497-dc48-496f-a08e-3813db44f607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\physics\bounding">
+      <UniqueIdentifier>{5fd94914-c73c-4905-9002-8c998abcdd9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\physics\collision_detect">
+      <UniqueIdentifier>{131c8aab-c8e8-4820-8851-d44bacc49189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\rendering">
+      <UniqueIdentifier>{58edf06a-cbee-4333-bdd4-1c226ba9e6e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\rendering\lighting">
+      <UniqueIdentifier>{271f3d67-b4f2-4e98-ba8c-4adfccfc18aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\rendering\object_data">
+      <UniqueIdentifier>{c2802d03-312b-4d55-ad86-03e463289885}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\rendering\render_texture">
+      <UniqueIdentifier>{1bd09b1c-8b54-4009-8352-4ac42ce6266c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\rendering\shading">
+      <UniqueIdentifier>{0936500f-bf1c-43e1-ae12-9b1828353621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\rendering\shading\material_property">
+      <UniqueIdentifier>{8192c375-fe4f-422e-ab57-9f07ac872c59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\resource">
+      <UniqueIdentifier>{2ba04a56-359a-4dc5-a2f8-08b9df1ec5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\resource\loader">
+      <UniqueIdentifier>{e9741926-b6e8-48d5-87ab-ad02b6135cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\resource\type">
+      <UniqueIdentifier>{362dff13-3630-4eb4-86ca-bc3b07f7ec30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\scene">
+      <UniqueIdentifier>{81b37869-b976-4890-85f3-9c7ffb692cf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\settings">
+      <UniqueIdentifier>{88384937-1911-4b5e-a0f7-f9a52bcdf634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\system">
+      <UniqueIdentifier>{e6325ce0-97dc-4137-bb4f-52b210dab306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\omicron\utilities">
+      <UniqueIdentifier>{0971a71c-17f4-47a3-8fd5-acd15ebe3ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\override">
+      <UniqueIdentifier>{0cfb3604-8093-47f0-b588-51dd5d4a2ac2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resource_pack">
+      <UniqueIdentifier>{4905d5af-9f59-4e3b-a841-44241c12778f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{8b38e4a2-0706-4109-be01-bacffd4318f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\start_up">
+      <UniqueIdentifier>{b14db247-49fd-41d7-a82a-62ee714e9aa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes\test">
+      <UniqueIdentifier>{9cc22405-37a9-42dd-b765-7df1a52a785e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\Utilitron\FileUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\MacroUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\MathUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\StringUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\ThreadUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\TimeUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\TypeUtil.hpp">
+      <Filter>lib\Utilitron</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\exceptions\CollectionException.hpp">
+      <Filter>lib\Utilitron\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Utilitron\exceptions\Exception.hpp">
+      <Filter>lib\Utilitron\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\Globals.hpp">
+      <Filter>src\data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\layers\GUILayers.hpp">
+      <Filter>src\data\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\data\layers\StartUpLayers.hpp">
+      <Filter>src\data\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\debug\FPSCounter.hpp">
+      <Filter>src\entities\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\menu\PauseMenu.hpp">
+      <Filter>src\entities\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\menu\setting_widget\EnumWidget.hpp">
+      <Filter>src\entities\menu\setting_widget</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\menu\setting_widget\SettingWidget.hpp">
+      <Filter>src\entities\menu\setting_widget</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\menu\setting_widget\SliderWidget.hpp">
+      <Filter>src\entities\menu\setting_widget</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\start_up\OmicronLogo.hpp">
+      <Filter>src\entities\start_up</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\GlowCube.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\Human.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\MapCube.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\Monkey.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\TestEnvironment.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\TestEvil.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\TestFps.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\TestPlayer.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\test\TestSun.hpp">
+      <Filter>src\entities\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\functions\settings\ApplySettings.hpp">
+      <Filter>src\functions\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\functions\settings\Config.hpp">
+      <Filter>src\functions\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\Omicron.hpp">
+      <Filter>src\omicron</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\audio\SoundPool.hpp">
+      <Filter>src\omicron\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\Camera.hpp">
+      <Filter>src\omicron\component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\Component.hpp">
+      <Filter>src\omicron\component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\Transform.hpp">
+      <Filter>src\omicron\component</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\light\DirectionalLight.hpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\light\Light.hpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\light\PointLight.hpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\light\SpotLight.hpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\physics\CollisionChecker.hpp">
+      <Filter>src\omicron\component\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\physics\CollisionDetector.hpp">
+      <Filter>src\omicron\component\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\physics\Physics.hpp">
+      <Filter>src\omicron\component\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\renderable\KeyFrameMesh.hpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\renderable\Mesh.hpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\renderable\Renderable.hpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\renderable\Sprite.hpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\renderable\Text.hpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\updatable\Updatable.hpp">
+      <Filter>src\omicron\component\updatable</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\component\updatable\audio\Music.hpp">
+      <Filter>src\omicron\component\updatable\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\display\Window.hpp">
+      <Filter>src\omicron\display</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\entity\ComponentTable.hpp">
+      <Filter>src\omicron\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\entity\Entity.hpp">
+      <Filter>src\omicron\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\input\Input.hpp">
+      <Filter>src\omicron\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\logic\FPSManager.hpp">
+      <Filter>src\omicron\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\logic\LogicManager.hpp">
+      <Filter>src\omicron\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\physics\bounding\BoundingCircle.hpp">
+      <Filter>src\omicron\physics\bounding</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\physics\bounding\BoundingRect.hpp">
+      <Filter>src\omicron\physics\bounding</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\physics\bounding\BoundingShape.hpp">
+      <Filter>src\omicron\physics\bounding</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\physics\bounding\BoundingSphere.hpp">
+      <Filter>src\omicron\physics\bounding</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\physics\collision_detect\CollisionDetect.hpp">
+      <Filter>src\omicron\physics\collision_detect</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\Renderer.hpp">
+      <Filter>src\omicron\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\RenderLists.hpp">
+      <Filter>src\omicron\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\VisibilityCheckThread.hpp">
+      <Filter>src\omicron\rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\lighting\LightData.hpp">
+      <Filter>src\omicron\rendering\lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\lighting\ShadowMap.hpp">
+      <Filter>src\omicron\rendering\lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\object_data\Geometry.hpp">
+      <Filter>src\omicron\rendering\object_data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\BlurHorRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\BlurVertRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\FinalRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\GlowBlurHorRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\GlowBlurVertRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\GlowCollateRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\GlowFirstPassRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\GuiRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\RenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\StdRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\render_texture\VisCheckRenderTexture.hpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\Animation.hpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\Font.hpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\Material.hpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\Shader.hpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\Texture.hpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\material_property\Glow.hpp">
+      <Filter>src\omicron\rendering\shading\material_property</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\rendering\shading\material_property\Specular.hpp">
+      <Filter>src\omicron\rendering\shading\material_property</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\ResourceManager.hpp">
+      <Filter>src\omicron\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\ResourceServer.hpp">
+      <Filter>src\omicron\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\VirtualFile.hpp">
+      <Filter>src\omicron\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\loader\GeoThread.hpp">
+      <Filter>src\omicron\resource\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\loader\Loaders.hpp">
+      <Filter>src\omicron\resource\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\FontResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\GeometryResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\KeyFrameMeshResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\MaterialResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\MeshResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\Resource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\ShaderResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\SoundResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\SpriteResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\TextResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\resource\type\TextureResource.hpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\scene\Scene.hpp">
+      <Filter>src\omicron\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\settings\AudioSettings.hpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\settings\DisplaySettings.hpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\settings\RenderSettings.hpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\settings\SystemSettings.hpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\utilities\TransformUtil.hpp">
+      <Filter>src\omicron\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omicron\utilities\VectorUtil.hpp">
+      <Filter>src\omicron\utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\override\ResourceGroups.hpp">
+      <Filter>src\override</Filter>
+    </ClInclude>
+    <ClInclude Include="src\override\StartUp.hpp">
+      <Filter>src\override</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource_pack\Packs.hpp">
+      <Filter>src\resource_pack</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\start_up\StartUpScene.hpp">
+      <Filter>src\scenes\start_up</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scenes\test\TestScene.hpp">
+      <Filter>src\scenes\test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\data\Globals.cpp">
+      <Filter>src\data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\debug\FPSCounter.cpp">
+      <Filter>src\entities\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\menu\PauseMenu.cpp">
+      <Filter>src\entities\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\menu\setting_widget\EnumWidget.cpp">
+      <Filter>src\entities\menu\setting_widget</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\menu\setting_widget\SettingWidget.cpp">
+      <Filter>src\entities\menu\setting_widget</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\menu\setting_widget\SliderWidget.cpp">
+      <Filter>src\entities\menu\setting_widget</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\start_up\OmicronLogo.cpp">
+      <Filter>src\entities\start_up</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\GlowCube.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\Human.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\MapCube.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\Monkey.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\TestEnvironment.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\TestEvil.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\TestFps.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\TestPlayer.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\test\TestSun.cpp">
+      <Filter>src\entities\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\functions\settings\ApplySettings.cpp">
+      <Filter>src\functions\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\functions\settings\Config.cpp">
+      <Filter>src\functions\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\Omicron.cpp">
+      <Filter>src\omicron</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\audio\SoundPool.cpp">
+      <Filter>src\omicron\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\Camera.cpp">
+      <Filter>src\omicron\component</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\Transform.cpp">
+      <Filter>src\omicron\component</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\light\DirectionalLight.cpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\light\Light.cpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\light\PointLight.cpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\light\SpotLight.cpp">
+      <Filter>src\omicron\component\light</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\physics\CollisionChecker.cpp">
+      <Filter>src\omicron\component\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\physics\CollisionDetector.cpp">
+      <Filter>src\omicron\component\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\renderable\KeyFrameMesh.cpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\renderable\Mesh.cpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\renderable\Renderable.cpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\renderable\Sprite.cpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\renderable\Text.cpp">
+      <Filter>src\omicron\component\renderable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\component\updatable\audio\Music.cpp">
+      <Filter>src\omicron\component\updatable\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\display\Window.cpp">
+      <Filter>src\omicron\display</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\entity\ComponentTable.cpp">
+      <Filter>src\omicron\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\input\Keyboard.cpp">
+      <Filter>src\omicron\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\input\Mouse.cpp">
+      <Filter>src\omicron\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\logic\FPSManager.cpp">
+      <Filter>src\omicron\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\logic\LogicManager.cpp">
+      <Filter>src\omicron\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\physics\collision_detect\CollisionDetect.cpp">
+      <Filter>src\omicron\physics\collision_detect</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\Renderer.cpp">
+      <Filter>src\omicron\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\RenderLists.cpp">
+      <Filter>src\omicron\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\VisibilityCheckThread.cpp">
+      <Filter>src\omicron\rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\lighting\ShadowMap.cpp">
+      <Filter>src\omicron\rendering\lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\BlurHorRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\BlurVertRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\FinalRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\GlowBlurHorRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\GlowBlurVertRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\GlowCollateRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\GlowFirstPassRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\GuiRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\RenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\StdRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\render_texture\VisCheckRenderTexture.cpp">
+      <Filter>src\omicron\rendering\render_texture</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\shading\Animation.cpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\shading\Material.cpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\shading\Shader.cpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\shading\Texture.cpp">
+      <Filter>src\omicron\rendering\shading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\shading\material_property\Glow.cpp">
+      <Filter>src\omicron\rendering\shading\material_property</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\rendering\shading\material_property\Specular.cpp">
+      <Filter>src\omicron\rendering\shading\material_property</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\ResourceManager.cpp">
+      <Filter>src\omicron\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\ResourceServer.cpp">
+      <Filter>src\omicron\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\VirtualFile.cpp">
+      <Filter>src\omicron\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\loader\FontLoader.cpp">
+      <Filter>src\omicron\resource\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\loader\GeometryLoader.cpp">
+      <Filter>src\omicron\resource\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\loader\ShaderLoader.cpp">
+      <Filter>src\omicron\resource\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\loader\TextureLoader.cpp">
+      <Filter>src\omicron\resource\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\FontResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\GeometryResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\KeyFrameMeshResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\MaterialResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\MeshResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\ShaderResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\SoundResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\SpriteResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\TextResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\resource\type\TextureResource.cpp">
+      <Filter>src\omicron\resource\type</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\scene\Scene.cpp">
+      <Filter>src\omicron\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\settings\AudioSettings.cpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\settings\DisplaySettings.cpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\settings\RenderSettings.cpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\settings\SystemSettings.cpp">
+      <Filter>src\omicron\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omicron\system\System.cpp">
+      <Filter>src\omicron\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\override\StartUp.cpp">
+      <Filter>src\override</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resource_pack\AllPack.cpp">
+      <Filter>src\resource_pack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resource_pack\DebugPack.cpp">
+      <Filter>src\resource_pack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resource_pack\MenuPack.cpp">
+      <Filter>src\resource_pack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resource_pack\StartUpPack.cpp">
+      <Filter>src\resource_pack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\resource_pack\TestPack.cpp">
+      <Filter>src\resource_pack</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scenes\start_up\StartUpScene.cpp">
+      <Filter>src\scenes\start_up</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scenes\test\TestScene.cpp">
+      <Filter>src\scenes\test</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
