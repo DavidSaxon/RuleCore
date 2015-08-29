@@ -93,8 +93,16 @@ void GameplayControl::lookControl()
 void GameplayControl::initComponents()
 {
     // camera transforms
+    m_preT = new omi::Transform(
+            "",
+            glm::vec3( 25.0f, 25.0F, 50.0F ),
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( m_preT );
     m_rotateT = new omi::Transform(
             "",
+            m_preT,
             glm::vec3( 0.0f, 0.0F, 0.0F ),
             glm::vec3( -25.0F, 90.0F, 0.0F ),
             glm::vec3( 1.0f, 1.0f, 1.0f )

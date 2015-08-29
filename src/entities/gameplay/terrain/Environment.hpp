@@ -33,6 +33,8 @@ public:
 
     void update();
 
+    GroundBlock* getBlock( float x, float y, float z );
+
 private:
 
     //--------------------------------------------------------------------------
@@ -68,6 +70,8 @@ private:
     void generatePit( size_t x, size_t z, size_t height );
 
     bool removeColumn( size_t x, size_t z, size_t height );
+
+
 };
 
 #endif

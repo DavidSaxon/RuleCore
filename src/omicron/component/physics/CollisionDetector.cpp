@@ -11,6 +11,7 @@ CollisionDetector::CollisionDetector(
         const std::string& group,
               void*      owner ) :
     Physics( id ),
+    active ( false ),
     m_group( group ),
     m_owner( static_cast<Entity*>( owner ) )
 {
@@ -22,6 +23,7 @@ CollisionDetector::CollisionDetector(
         const std::vector<BoundingShape*>& boundings,
               void*      owner ) :
     Physics( id ),
+    active ( false ),
     m_group( group ),
     m_owner( static_cast<Entity*>( owner ) )
 {

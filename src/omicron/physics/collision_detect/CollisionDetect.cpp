@@ -52,11 +52,23 @@ void CollisionDetect::update()
             m_groups[it->a].begin();
             first != m_groups[it->a].end(); ++first )
         {
+            // check if active
+            if ( !( *first )->active )
+            {
+                continue;
+            }
+
             // go over each item in the second m_groups
             for ( std::vector<CollisionDetector*>::iterator second =
                 m_groups[it->b].begin();
                 second != m_groups[it->b].end(); ++second )
             {
+                // check if active
+                if ( !( *second )->active )
+                {
+                    continue;
+                }
+
                 // perform collision detection
                 if ( first != second )
                 {

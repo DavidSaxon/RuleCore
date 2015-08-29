@@ -4,6 +4,7 @@
 
 #include "src/entities/gameplay/GameplayControl.hpp"
 #include "src/entities/gameplay/terrain/Environment.hpp"
+#include "src/entities/gameplay/unit/Artillery.hpp"
 #include "src/entities/menu/PauseMenu.hpp"
 
 
@@ -25,8 +26,11 @@ void GameplayScene::init()
     // add entities
     addEntity( new PauseMenu() );
     addEntity( new GameplayControl() );
-    addEntity( new Environment() );
+    Environment* env = new Environment();
+    addEntity( env );
 
+    // add some artillery
+    addEntity( new Artillery( env ) );
 }
 
 bool GameplayScene::update()

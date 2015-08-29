@@ -28,6 +28,7 @@ private:
     //--------------------------------------------------------------------------
 
     // camera translations
+    omi::Transform* m_preT;
     omi::Transform* m_rotateT;
     omi::Transform* m_transT;
 

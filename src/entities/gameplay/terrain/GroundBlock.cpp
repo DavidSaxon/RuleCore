@@ -35,17 +35,45 @@ GroundBlock::GroundBlock(
 
 void GroundBlock::init()
 {
+    // transform
+    omi::Transform* transform = new omi::Transform(
+            "",
+            glm::vec3( m_x, m_y, m_z ) - m_offset,
+            glm::vec3(),
+            glm::vec3( 1.0f, 1.0f, 1.0f )
+    );
+    m_components.add( transform );
 }
 
 void GroundBlock::update()
 {
-    addFace( block::FACE_UP );
-    addFace( block::FACE_DOWN );
-    addFace( block::FACE_NORTH );
-    addFace( block::FACE_SOUTH );
-    addFace( block::FACE_EAST );
-    addFace( block::FACE_WEST );
+    bool collide = false;
 
+    // add faces into the renderer
+    if ( addFace( block::FACE_UP ) )
+    {
+        collide = true;
+    }
+    if ( addFace( block::FACE_DOWN ) )
+    {
+        collide = true;
+    }
+    if ( addFace( block::FACE_NORTH ) )
+    {
+        collide = true;
+    }
+    if ( addFace( block::FACE_SOUTH ) )
+    {
+        collide = true;
+    }
+    if ( addFace( block::FACE_EAST ) )
+    {
+        collide = true;
+    }
+    if ( addFace( block::FACE_WEST ) )
+    {
+        collide = true;
+    }
 }
 
 void GroundBlock::blockRemove()
@@ -114,7 +142,7 @@ void GroundBlock::evalulateType()
     if ( m_y >= dirtyStart && m_y <= dirtyEnd )
     {
         // check if there is a block above
-        m_type = block::TYPE_DIRTY_SNOW;
+        m_type = block::TYPE_DIRT;
         return;
     }
 
@@ -128,7 +156,7 @@ void GroundBlock::evalulateType()
     if ( m_y >= gravelStart && m_y <= gravelEnd )
     {
         // check if there is a block above
-        m_type = block::TYPE_GRAVEL;
+        m_type = block::TYPE_DIRT;
         return;
     }
     else if ( m_y < gravelStart )
@@ -139,7 +167,7 @@ void GroundBlock::evalulateType()
     }
 }
 
-void GroundBlock::addFace( block::FaceDirection face )
+bool GroundBlock::addFace( block::FaceDirection face )
 {
     // check if the face should be shown
     bool shouldAdd = false;
@@ -249,4 +277,6 @@ void GroundBlock::addFace( block::FaceDirection face )
         glm::vec3 pos( m_x, m_y, m_z );
         m_renderer->addFace( pos - m_offset, face, m_type );
     }
+
+    return shouldAdd;
 }

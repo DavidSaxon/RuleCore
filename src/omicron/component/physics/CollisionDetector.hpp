@@ -30,6 +30,8 @@ public:
     //                                 VARIABLES
     //--------------------------------------------------------------------------
 
+    // whether this is active or not
+    bool active;
     // TODO: should this be public, could just have getter
     // the boundings within this
     std::vector<std::unique_ptr<BoundingShape>> m_boundings;

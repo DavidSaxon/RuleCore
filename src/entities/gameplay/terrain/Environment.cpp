@@ -1,5 +1,6 @@
 #include "Environment.hpp"
 
+#include "src/data/Globals.hpp"
 #include "src/entities/gameplay/terrain/BlockRenderer.hpp"
 #include "src/entities/gameplay/terrain/GroundBlock.hpp"
 
@@ -18,7 +19,7 @@ static const float TERRAIN_X_OFFSET = TERRAIN_WIDTH / 2.0;
 static const float TERRAIN_Z_OFFSET = TERRAIN_LENGTH / 2.0;
 static const float TERRAIN_Y_OFFSET = TERRAIN_DEPTH / 2.0;
 static const glm::vec3 TERRAIN_OFFSET(
-        TERRAIN_X_OFFSET, TERRAIN_Y_OFFSET, TERRAIN_Y_OFFSET );
+        0.0F, 0.0F, 0.0F );
 
 static const float SUN_DISTANCE = 130.0F;
 static const float SUN_SPEED = 0.1F;
@@ -70,6 +71,12 @@ void Environment::init()
 
 void Environment::update()
 {
+    // don't do anything if we're paused
+    if ( global::pause )
+    {
+        return;
+    }
+
     // rotate the sun
     m_sunRot += SUN_SPEED * omi::fpsManager.getTimeScale();
     if ( m_sunRot >= 360.0F )
@@ -82,6 +89,31 @@ void Environment::update()
     m_sunT->translation.y = util::math::cosd( m_sunRot );
     m_sunGlobeT->translation.z = m_sunT->translation.z * SUN_DISTANCE;
     m_sunGlobeT->translation.y = m_sunT->translation.y * SUN_DISTANCE;
+}
+
+GroundBlock* Environment::getBlock( float x, float y, float z )
+{
+    // truncate
+    size_t t_x = static_cast< size_t >( x );
+    size_t t_y = static_cast< size_t >( y );
+    size_t t_z = static_cast< size_t >( z );
+
+    // check bounds
+    if ( t_x >= TERRAIN_WIDTH )
+    {
+        return NULL;
+    }
+    if ( t_z >= TERRAIN_LENGTH )
+    {
+        return NULL;
+    }
+    if ( t_y >= TERRAIN_DEPTH )
+    {
+        return NULL;
+    }
+
+    // get the cube
+    return m_terrain[ t_x ][ t_z ][ t_y ];
 }
 
 //------------------------------------------------------------------------------

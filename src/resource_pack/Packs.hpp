@@ -26,6 +26,8 @@ void buildMenuPack();
 
 void buildTerrainPack();
 
+void buildUnitPack();
+
 //------------------------------------------------------------------------------
 //                                   FUNCTIONS
 //------------------------------------------------------------------------------
@@ -38,6 +40,7 @@ inline void build()
     buildStartUpPack();
     buildMenuPack();
     buildTerrainPack();
+    buildUnitPack();
 }
 
 } // namespace pack

@@ -72,7 +72,7 @@ private:
     void evalulateType();
 
     // check face for world data
-    void addFace( block::FaceDirection face );
+    bool addFace( block::FaceDirection face );
 };
 
 #endif
