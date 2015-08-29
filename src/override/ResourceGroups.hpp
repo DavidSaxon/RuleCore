@@ -9,8 +9,7 @@ enum ResourceGroup {
     DEBUG,
     START_UP,
     MENU,
-    GAMEPLAY,
-    TEST
+    GAMEPLAY
 };
 
 } // namespace resource_group

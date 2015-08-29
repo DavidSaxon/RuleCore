@@ -29,9 +29,6 @@ bool StartUpScene::update()
         omi::ResourceManager::load( resource_group::MENU );
         omi::ResourceManager::load( resource_group::GAMEPLAY );
 
-        // TODO: REMOVE ME
-        omi::ResourceManager::load(resource_group::TEST);
-
         // start up finished
         return true;
     }
