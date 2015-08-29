@@ -9,6 +9,7 @@ enum ResourceGroup {
     DEBUG,
     START_UP,
     MENU,
+    GAMEPLAY,
     TEST
 };
 

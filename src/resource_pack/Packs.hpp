@@ -24,6 +24,8 @@ void buildStartUpPack();
 
 void buildMenuPack();
 
+void buildTerrainPack();
+
 void buildTestPack();
 
 //------------------------------------------------------------------------------
@@ -37,6 +39,7 @@ inline void build()
     buildDebugPack();
     buildStartUpPack();
     buildMenuPack();
+    buildTerrainPack();
     buildTestPack();
 }
 

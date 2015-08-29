@@ -4,7 +4,6 @@
 #include "src/omicron/scene/Scene.hpp"
 
 #include "src/entities/start_up/OmicronLogo.hpp"
-#include "src/scenes/test/TestScene.hpp"
 
 /*************************************************************\
 | Loads the initial resources and displays start up graphics. |

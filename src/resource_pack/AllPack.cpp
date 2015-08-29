@@ -20,7 +20,14 @@ void buildAllPack()
     omi::ResourceManager::addFont(
         "default_font",
         resource_group::ALL,
-        "res/gfx/fonts/clear_sans.ttf"
+        "res/gfx/fonts/main_font.ttf"
+    );
+
+    // title font
+    omi::ResourceManager::addFont(
+        "title_font",
+        resource_group::ALL,
+        "res/gfx/fonts/title_font.ttf"
     );
 }
 

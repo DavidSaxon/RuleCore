@@ -1,5 +1,7 @@
 #include "StartUpScene.hpp"
 
+#include "src/scenes/gameplay/GameplayScene.hpp"
+
 //------------------------------------------------------------------------------
 //                            PUBLIC MEMBER FUNCTIONS
 //------------------------------------------------------------------------------
@@ -24,8 +26,11 @@ bool StartUpScene::update()
     if ( m_omicronLogo->done() )
     {
         // load the next resources we'll need
-        omi::ResourceManager::load(resource_group::TEST);
         omi::ResourceManager::load( resource_group::MENU );
+        omi::ResourceManager::load( resource_group::GAMEPLAY );
+
+        // TODO: REMOVE ME
+        omi::ResourceManager::load(resource_group::TEST);
 
         // start up finished
         return true;
@@ -42,5 +47,5 @@ omi::Scene* StartUpScene::nextScene()
     // revert settings
     omi::renderSettings.setDepthTest( true );
 
-    return new TestScene();
+    return new GameplayScene();
 }

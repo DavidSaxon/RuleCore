@@ -33,8 +33,7 @@ void TestSun::init()
     m_components.add( m_lightT );
 
     // add light
-    omi::DirectionalLight* light =
-    light =  new omi::DirectionalLight(
+    omi::DirectionalLight* light = new omi::DirectionalLight(
         "", m_lightT, 0.8f, glm::vec3( 1.0f, 1.0f, 1.0f )
     );
     light->setCastShadow( true );

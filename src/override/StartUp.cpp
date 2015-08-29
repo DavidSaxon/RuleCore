@@ -14,7 +14,7 @@ omi::Scene* init()
 
     // system settings
     omi::systemSettings.enableForcedLag( false );
-    omi::systemSettings.setCursorHidden( true );
+    omi::systemSettings.setCursorHidden( false );
 
     // display settings
     omi::displaySettings.setSize( omi::displaySettings.getScreenSize() );
@@ -30,8 +30,8 @@ omi::Scene* init()
     omi::renderSettings.setShadowFrustumSize( 20.0f );
 
     //audio settings
-    omi::audioSettings.setSoundDisabled( false );
-    omi::audioSettings.setMusicDisabled( false );
+    omi::audioSettings.setSoundDisabled( true );
+    omi::audioSettings.setMusicDisabled( true );
 
     // apply settings from disk
     settings::config::applySettingsFromConfig();
