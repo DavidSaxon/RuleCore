@@ -361,6 +361,8 @@ void RenderLists::render( Camera* camera )
     // bind the standard render texture
     m_stdRenderTexture.bind();
 
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     // iterate over the layers
     for ( t_RenderableMap::iterator it = renderLayers.begin();
           it != renderLayers.end(); ++it )

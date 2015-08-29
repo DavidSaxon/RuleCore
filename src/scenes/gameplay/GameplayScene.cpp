@@ -6,6 +6,10 @@
 #include "src/entities/gameplay/terrain/Environment.hpp"
 #include "src/entities/menu/PauseMenu.hpp"
 
+
+// TODO: REMOVE ME
+#include "src/entities/debug/FPSCounter.hpp"
+
 //------------------------------------------------------------------------------
 //                            PUBLIC MEMBER FUNCTIONS
 //------------------------------------------------------------------------------
@@ -13,12 +17,16 @@
 void GameplayScene::init()
 {
     // effects
-    omi::renderSettings.setFilmGrain( 0.05f );
+    // omi::renderSettings.setFilmGrain( 0.05f );
+
+    // TODO: REMOVE ME
+    addEntity( new FPSCounter() );
 
     // add entities
     addEntity( new PauseMenu() );
     addEntity( new GameplayControl() );
     addEntity( new Environment() );
+
 }
 
 bool GameplayScene::update()

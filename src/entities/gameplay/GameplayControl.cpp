@@ -11,6 +11,7 @@ namespace
 {
 
 static const float LOOK_SPEED = 0.1F;
+static const float ZOOM_SPEED = 1.5F;
 
 } // namespace anonymous
 
@@ -20,7 +21,7 @@ static const float LOOK_SPEED = 0.1F;
 
 GameplayControl::GameplayControl()
     :
-    m_camZoom        ( 10.0F ),
+    m_camZoom        ( 50.0F ),
     m_camElevation   ( 0.0F ),
     m_lookControlDown( false )
 {
@@ -71,16 +72,22 @@ void GameplayControl::lookControl()
             ( m_mouseLockPos.y - omi::input::getMousePos().y ) * LOOK_SPEED;
         m_rotateT->rotation.y +=
             ( m_mouseLockPos.x - omi::input::getMousePos().x ) * LOOK_SPEED;
+
+        // don't process any further
+        return;
     }
-    else
+
+    // unlock the mouse
+    if ( m_lookControlDown )
     {
-        // unlock the mouse
         omi::systemSettings.setCursorLocked( false );
         m_lookControlDown = false;
     }
 
-
-    // TODO: zoom
+    //  zoom
+    m_camZoom -= ZOOM_SPEED * omi::input::getMouseScroll();
+    // apply to camera
+    m_transT->translation.z = m_camZoom;
 }
 
 void GameplayControl::initComponents()
@@ -89,7 +96,7 @@ void GameplayControl::initComponents()
     m_rotateT = new omi::Transform(
             "",
             glm::vec3( 0.0f, 0.0F, 0.0F ),
-            glm::vec3( -25.0F, -25.0F, 0.0F ),
+            glm::vec3( -25.0F, 90.0F, 0.0F ),
             glm::vec3( 1.0f, 1.0f, 1.0f )
     );
     m_components.add( m_rotateT );
@@ -103,8 +110,13 @@ void GameplayControl::initComponents()
     m_components.add( m_transT );
 
     // the camera
-    omi::Camera* camera =
-        new omi::Camera( "", omi::cam::PERSPECTIVE, m_transT );
-    camera->setExposure( 1.2f );
+    omi::Camera* camera = new omi::Camera(
+        "",
+        omi::cam::PERSPECTIVE,
+        m_transT,
+        0.2F,
+        370.0F
+    );
+    camera->setExposure( 2.0f );
     m_components.add( camera );
 }
