@@ -25,14 +25,14 @@ omi::Scene* init()
     omi::renderSettings.setDepthTest( true );
     omi::renderSettings.setBackFaceCulling( true );
     // omi::renderSettings.setClearColour( glm::vec4( 0.3F, 0.8F, 1.0F, 1.0F ) );
-    omi::renderSettings.setClearColour( glm::vec4( 0.4F, 0.4F, 0.4F, 1.0F ) );
+    omi::renderSettings.setClearColour( glm::vec4( 0.0F, 0.0F, 0.0F, 1.0F ) );
     omi::renderSettings.setColourPicking( true );
     omi::renderSettings.setVisibilityChecking( false );
-    omi::renderSettings.setShadowFrustumSize( 85.0f );
+    omi::renderSettings.setShadowFrustumSize( 130.0f );
 
     //audio settings
-    omi::audioSettings.setSoundDisabled( true );
-    omi::audioSettings.setMusicDisabled( true );
+    omi::audioSettings.setSoundDisabled( false );
+    omi::audioSettings.setMusicDisabled( false );
 
     // apply settings from disk
     settings::config::applySettingsFromConfig();

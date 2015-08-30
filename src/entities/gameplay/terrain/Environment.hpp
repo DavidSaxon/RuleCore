@@ -23,7 +23,7 @@ public:
     //                                CONSTRUCTOR
     //--------------------------------------------------------------------------
 
-    Environment();
+    Environment( bool flat );
 
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
@@ -35,11 +35,22 @@ public:
 
     GroundBlock* getBlock( float x, float y, float z );
 
+    GroundBlock* removeBlock(
+            float x,
+            float y,
+            float z,
+            bool strong = false,
+            bool weak = false );
+
+    GroundBlock* addBlock( float x, float y, float z, bool strong = false );
+
 private:
 
     //--------------------------------------------------------------------------
     //                                 VARIABLES
     //--------------------------------------------------------------------------
+
+    bool m_flat;
 
     // the render optmiser for blocks
     BlockRenderer* m_blockRenderer;

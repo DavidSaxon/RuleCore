@@ -13,6 +13,8 @@ public:
 
     GameplayControl();
 
+    ~GameplayControl();
+
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
     //--------------------------------------------------------------------------
@@ -42,9 +44,14 @@ private:
     // the current position the mouse is locked at
     glm::vec2 m_mouseLockPos;
 
+    // music
+    omi::Music* m_mainMusic;
+
     //--------------------------------------------------------------------------
     //                          PRIVATE MEMBER FUNCTIONS
     //--------------------------------------------------------------------------
+
+    void moveControl();
 
     void lookControl();
 

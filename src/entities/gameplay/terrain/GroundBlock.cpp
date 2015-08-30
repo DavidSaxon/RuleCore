@@ -81,6 +81,21 @@ void GroundBlock::blockRemove()
     remove();
 }
 
+size_t GroundBlock::getX()
+{
+    return m_x;
+}
+
+size_t GroundBlock::getY()
+{
+    return m_y;
+}
+
+size_t GroundBlock::getZ()
+{
+    return m_z;
+}
+
 //------------------------------------------------------------------------------
 //                            PRIVATE MEMBER FUNCTIONS
 //------------------------------------------------------------------------------

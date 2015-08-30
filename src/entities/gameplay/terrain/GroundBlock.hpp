@@ -39,6 +39,12 @@ public:
 
     void blockRemove();
 
+    size_t getX();
+
+    size_t getY();
+
+    size_t getZ();
+
 private:
 
     //--------------------------------------------------------------------------

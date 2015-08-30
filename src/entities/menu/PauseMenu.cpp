@@ -337,7 +337,9 @@ void PauseMenu::acceptExitMenu()
         case EXIT_YES:
         {
             // exit the game
-            omi::omi_running = false;
+            global::pause = false;
+            omi::renderSettings.setBlur( false );
+            global::fuck = true;
             break;
         }
     }
@@ -680,7 +682,7 @@ void PauseMenu::initMainMenuComponents()
     omi::Text* text =
             omi::ResourceManager::getText( "pause_main_item_text", "", t );
     text->gui = true;
-    text->setString( "Exit" );
+    text->setString( "Main Menu" );
     text->setHorCentred( true );
     text->setVertCentred( true );
     text->visible = false;

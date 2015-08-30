@@ -177,7 +177,6 @@ void Renderable::renderSelectable(
 {
     // don't bother rendering if there is no camera
     if ( camera == NULL          ||
-         !visible                ||
          !m_material.isVisible() ||
          m_onlyVisCheck )
     {

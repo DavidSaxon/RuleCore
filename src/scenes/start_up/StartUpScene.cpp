@@ -1,6 +1,6 @@
 #include "StartUpScene.hpp"
 
-#include "src/scenes/gameplay/GameplayScene.hpp"
+#include "src/scenes/menu/MenuScene.hpp"
 
 //------------------------------------------------------------------------------
 //                            PUBLIC MEMBER FUNCTIONS
@@ -44,5 +44,5 @@ omi::Scene* StartUpScene::nextScene()
     // revert settings
     omi::renderSettings.setDepthTest( true );
 
-    return new GameplayScene();
+    return new MenuScene();
 }

@@ -16,6 +16,8 @@ namespace global {
 // is true if reverie is paused
 extern bool pause;
 
+extern bool fuck;
+
 //-----------------------------------SETTINGS-----------------------------------
 
 // the master volume for all sounds

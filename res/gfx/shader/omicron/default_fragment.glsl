@@ -44,21 +44,21 @@ uniform vec3 u_ambientLight;
 // the number of lights
 uniform int u_lightCount;
 // the light types
-uniform int u_lightType[8];
+uniform int u_lightType[32];
 // the light positions
-uniform vec3 u_lightPos[8];
+uniform vec3 u_lightPos[32];
 // the light rotations
-uniform vec3 u_lightRot[8];
+uniform vec3 u_lightRot[32];
 // the light colours
-uniform vec3 u_lightColour[8];
+uniform vec3 u_lightColour[32];
 // the light attenuations
-uniform vec3 u_lightAttenuation[8];
+uniform vec3 u_lightAttenuation[32];
 // the light arcs
-uniform vec2 u_lightArc[8];
+uniform vec2 u_lightArc[32];
 // the lights that are inversed
-uniform int u_lightInverse[8];
+uniform int u_lightInverse[32];
 // the lights that are ignored
-uniform int u_lightIgnore[8];
+uniform int u_lightIgnore[32];
 
 //the texture coords
 varying vec2 v_texCoord;
@@ -125,7 +125,7 @@ void main() {
         {
             // calculate shadowing
             float visibility = 1.0;
-            if ( i == u_shadowCaster )
+            if ( i == u_shadowCaster && u_shadeless == 0 )
             {
                 float shadowCosThetha = dot( N, normalize( u_lightPos[i] ) );
                 shadowCosThetha = clamp( shadowCosThetha, 0.0, 1.0 );

@@ -13,6 +13,7 @@ Light::Light(
         const glm::vec3&      colour )
     :
     Component    ( id ),
+    active       ( true ),
     m_transform  ( transform ),
     m_power      ( power ),
     m_colour     ( colour ),

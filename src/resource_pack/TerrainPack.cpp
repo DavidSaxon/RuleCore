@@ -4,6 +4,18 @@ namespace pack {
 
 void buildTerrainPack()
 {
+    // skybox
+    omi::ResourceManager::addTextureMaterialGeometryMesh(
+            "skybox",
+            resource_group::GAMEPLAY,
+            "default_shader",
+            "res/gfx/texture/gameplay/terrain/skybox.png",
+            "res/gfx/geometry/gameplay/terrain/skybox.obj",
+            0,
+            0,
+            omi::material::SHADELESS
+    );
+
     // sun
     omi::ResourceManager::addMaterialGeometryMesh(
             "sun",

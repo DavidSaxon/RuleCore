@@ -1,0 +1,28 @@
+/+++++++++++++++\
+| INSTRUCTIONS: |
+\+++++++++++++++/
+
+
+You are the blue team, destroy the red teams artillery units using your own.
+
+Right click on a blue unit to change it's attack rule:
+
+    - a white circle/ring above the unit means it will not attack
+
+    - a purple/pink downwards arrow above the unit means it's attacks will be
+        destroying terrain in the world
+
+    - a red/orange upwards arrow above the unit means it's attacks will be
+        adding terrain to the world
+
+Left click and drag on your units to rotate them change their angle of fire
+
+
+
+- Hold middle click and drag to rotate the camera
+
+- Use the scroll wheel to zoom in and out
+
+- Hold shift and middle click to translate the camera ( buggy )
+
+- Hold shift and scroll to change the elevation of the camera

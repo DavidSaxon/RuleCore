@@ -4,6 +4,8 @@ namespace global {
 
 bool pause = false;
 
+bool fuck = false;
+
 //-----------------------------------SETTINGS-----------------------------------
 
 // the master volume for all sounds

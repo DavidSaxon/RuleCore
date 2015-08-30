@@ -7,6 +7,8 @@ class GameplayScene : public omi::Scene
 {
 public:
 
+    GameplayScene( bool flat );
+
     //--------------------------------------------------------------------------
     //                          PUBLIC MEMBER FUNCTIONS
     //--------------------------------------------------------------------------
@@ -19,6 +21,8 @@ public:
 
     /** #Override */
     virtual omi::Scene* nextScene();
+
+    bool m_flat;
 };
 
 #endif

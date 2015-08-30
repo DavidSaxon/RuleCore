@@ -5,7 +5,7 @@ namespace omi {
 namespace {
 
 // the maximum number of point lights
-static const unsigned MAX_LIGHTS = 8;
+static const unsigned MAX_LIGHTS = 32;
 
 } // namespace anonymous
 
@@ -675,6 +675,12 @@ void RenderLists::buildLightData(
           it != m_lights.end(); ++it )
     {
         Light* light = *it;
+
+        // ignore non-active lights
+        if ( !light->active )
+        {
+            continue;
+        }
 
         // TODO: FIX THIS SHIT
         glm::vec3 pos( light->getTransform()->translation );
